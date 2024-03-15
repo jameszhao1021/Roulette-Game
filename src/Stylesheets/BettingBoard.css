@@ -1,0 +1,463 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.bettingBoard {
+    width: 100%;
+    max-height: 660px;
+    /* min-height: 500px;  */
+    height:40vh;
+    position: relative;
+    max-width: 1730px;
+    min-width: 360px;
+    overflow: hidden;
+    color: #fff;
+    margin: auto;
+}
+.numberBoard {
+    font-size: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bolder;
+    position: relative;
+    min-width: 360px;
+}
+
+.topArea {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+    flex: 1;
+}
+
+.zeroArea {
+    width: 7%;
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+}
+
+.zeroBlock {
+    position: relative;
+    padding: 5px;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(2, 59, 14, 0.85);
+}
+
+.otherNumber {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    user-select: none;
+}
+
+.otherNumberRow {
+    display: flex;
+    flex: 1;
+}
+
+.zeroAreaBlock {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    bottom: -64.6%;
+    left: 2.8%;
+}
+
+.zeroAreaBlock:hover {
+    border: 1px solid #fff;
+}
+
+.otherNumberBlock {
+    position: relative;
+    padding: 2px;
+    border: 1px solid rgba(0, 0, 0, 0.85);
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.secondBottom {
+    display: flex;
+    width: 85.9%;
+    height: 20%;
+    user-select: none;
+}
+
+.secondBottomBlock {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(2, 59, 14, 0.85);
+}
+
+.lastBottom {
+    display: flex;
+    width: 85.9%;
+    height: 20%;
+    user-select: none;
+}
+
+.lastBottomBlock {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(2, 59, 14, 0.85);
+}
+
+.zeroBlock::after,
+.otherNumberBlock::after,
+.secondBottomBlock::after,
+.lastBottomBlock::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0);
+    transition: background-color 0.15s ease;
+}
+
+
+.zeroBlock:hover::after,
+.otherNumberBlock:hover::after,
+.secondBottomBlock:hover::after,
+.lastBottomBlock:hover::after {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.winningLines {
+    display: flex;
+    position: relative;
+    min-height: 50%;
+    width: 100%;
+    top: -150%;
+}
+
+.zeroAreaBlockLs,
+.hLineTwoMiddleLs,
+.vLineTwoMiddleLs,
+.cornerBetLs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.hLineTwoMiddleL {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80.4%;
+    height: 0.1%;
+    left: 9.8%;
+    bottom: -40.5%;
+}
+
+#hLineTwoMiddleL_1 {
+    bottom: -80.6%;
+}
+
+#hLineTwoMiddleL_2 {
+    bottom: -119.5%;
+}
+
+.hLineTwoMiddleB {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    z-index: 1;
+}
+
+.hLineTwoMiddleB:hover {
+    border: 1px solid #fff;
+}
+
+.vLineTwoMiddleL {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 0.1%;
+    height: 88%;
+    bottom: -104.3%;
+    left: 7.1%;
+}
+
+#vLineTwoMiddleL_1 {
+    left: 14.2%;
+}
+
+#vLineTwoMiddleL_2 {
+    left: 21.3%;
+}
+
+#vLineTwoMiddleL_3 {
+    left: 28.4%;
+}
+
+#vLineTwoMiddleL_4 {
+    left: 35.5%;
+}
+
+#vLineTwoMiddleL_5 {
+    left: 42.7%;
+}
+
+#vLineTwoMiddleL_6 {
+    left: 49.9%;
+}
+
+#vLineTwoMiddleL_7 {
+    left: 57%;
+}
+
+#vLineTwoMiddleL_8 {
+    left: 64.2%;
+}
+
+#vLineTwoMiddleL_9 {
+    left: 71.3%;
+}
+
+#vLineTwoMiddleL_10 {
+    left: 78.4%;
+}
+
+#vLineTwoMiddleL_11 {
+    left: 85.5%;
+}
+
+.vLineTwoMiddleB {
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+
+.vLineTwoMiddleB:hover {
+    border: 1px solid #fff;
+}
+
+.cornerBetL {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80.4%;
+    height: 0.1%;
+    bottom: -40.5%;
+    left: 6.2%;
+}
+
+#cornerBetL_1 {
+    bottom: -80.5%;
+}
+
+#cornerBetL_2 {
+    bottom: -119.6%;
+}
+
+.cornerBetB {
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+
+.cornerBetB:hover {
+    border: 1px solid #fff;
+}
+
+/* set color of each block */
+#otherNumberRow_0> :not(:nth-child(2)):not(:nth-child(5)):not(:nth-child(8)):not(:nth-child(11)):not(:nth-child(13)) {
+    background-color: rgba(255, 0, 0, 0.85);
+}
+
+#otherNumberRow_0> :nth-child(2),
+#otherNumberRow_0> :nth-child(5),
+#otherNumberRow_0> :nth-child(8),
+#otherNumberRow_0> :nth-child(11) {
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+#otherNumberRow_0>:last-child {
+    background-color: rgba(2, 59, 14, 0.85);
+}
+
+#otherNumberRow_1> :not(:nth-child(2)):not(:nth-child(5)):not(:nth-child(8)):not(:nth-child(11)):not(:nth-child(13)) {
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+#otherNumberRow_1> :nth-child(2),
+#otherNumberRow_1> :nth-child(5),
+#otherNumberRow_1> :nth-child(8),
+#otherNumberRow_1> :nth-child(11) {
+    background-color: rgba(255, 0, 0, 0.85);
+}
+
+#otherNumberRow_1>:last-child {
+    background-color: rgba(2, 59, 14, 0.85);
+}
+
+#otherNumberRow_2> :not(:nth-child(1)):not(:nth-child(3)):not(:nth-child(6)):not(:nth-child(7)):not(:nth-child(9)):not(:nth-child(12)):not(:nth-child(13)) {
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+#otherNumberRow_2> :nth-child(1),
+#otherNumberRow_2> :nth-child(3),
+#otherNumberRow_2> :nth-child(6),
+#otherNumberRow_2> :nth-child(7),
+#otherNumberRow_2> :nth-child(9),
+#otherNumberRow_2> :nth-child(12) {
+    background-color: rgba(255, 0, 0, 0.85);
+}
+
+#otherNumberRow_2>:last-child {
+    background-color: rgba(2, 59, 14, 0.85);
+}
+
+.lastBottom> :nth-child(3) {
+    background-color: rgba(255, 0, 0, 0.85);
+}
+
+
+.lastBottom> :nth-child(4) {
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+/* set white border */
+.otherNumberRow>div {
+    border-top: 4px solid #fff;
+    border-right: 4px solid #fff;
+}
+
+#otherNumberRow_0> :first-child,
+#otherNumberRow_1> :first-child,
+#otherNumberRow_2> :first-child {
+    border-left: 4px solid #fff;
+}
+
+#otherNumberRow_2>div {
+    border-bottom: 4px solid #fff;
+}
+
+#otherNumberRow_2> :last-child {
+    border-bottom: 4px solid #fff;
+}
+
+
+.secondBottom>div {
+
+    border-right: 4px solid white;
+}
+
+.secondBottom> :first-child {
+    border-left: 4px solid white;
+}
+
+
+.lastBottom>div {
+    border-top: 4px solid white;
+    border-bottom: 4px solid white;
+    border-left: 4px solid white;
+}
+
+.lastBottom> :last-child {
+    border-right: 4px solid white;
+}
+
+
+.zeroArea>div {
+    border: 4px solid white;
+    border-right: none;
+}
+
+.zeroArea> :first-child {
+    border-bottom: none;
+}
+
+/* set effect for the result number */
+.winningNumber {
+    color: gold;
+    font-size: 60px;
+    -webkit-text-stroke: 2px #fff;
+}
+
+ @media screen and (max-width: 1800px) {
+    .bettingBoard {
+        max-height: 480px;
+  }
+  .winningNumber {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 1450px) {
+    .numberBoard {
+        font-size:25px;
+
+  }
+}
+
+@media screen and (max-width: 1300px) {
+    .bettingBoard {
+        max-height: 370px;
+  }
+  .winningNumber {
+    font-size: 40px;
+}
+}
+
+@media screen and (max-width: 800px) {
+    .numberBoard {
+        font-size:20px;
+  }
+  .winningNumber {
+    font-size: 30px;
+}
+}
+@media screen and (max-width: 730px) {
+    .numberBoard {
+        font-size:16px;
+  }
+}
+@media screen and (max-width: 550px) {
+    .numberBoard {
+        font-size:13px;
+  }
+}
+@media screen and (max-width: 550px) {
+    .numberBoard {
+        max-height: 320px;
+  }
+}
+@media screen and (max-width: 460px) {
+    .numberBoard {
+        font-size:10px;
+        max-height: 280px;
+  }
+}
+@media screen and (max-width: 400px) {
+    .numberBoard {
+        max-height: 230px;
+  }
+}

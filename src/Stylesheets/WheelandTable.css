@@ -1,0 +1,260 @@
+.wheelandTable{
+    display: flex;
+    max-width: 1730px;
+    border: 4px solid #fff;
+    border-bottom: none;
+    max-height:750px;
+    height:50vh;
+    min-width: 360px;
+    margin: auto;
+}
+
+
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    width:60%;
+    padding:50px;
+    background-color: rgba(2, 59, 14,0.85);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 360px;
+}
+
+
+ @media screen and (max-width: 700px) {
+    .chipforDemo {
+        width:45px;
+        height:45px;
+        font-size: 10px;
+        border: 8px solid rgb(214, 202, 30);
+    }
+    .button, .soundEffect{
+        height:45px;  
+        width:56px;
+        font-size: 10px;
+    }
+  }
+  
+.canvas{
+    max-width: 630px;
+    max-height: 630px;
+    margin-top:10px;
+    top:0;
+    padding:0;
+    position: relative;
+    transform: rotate(-4.737deg);
+}
+.arrow{
+    width:25px;
+    margin-top:-25px;
+}
+
+.containerWheel{
+    margin-top: 10px;
+    position:relative;
+    width:500px;
+    height:500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#wheel{
+    min-height:100%;
+    min-width:100%;
+    top:0;
+    padding:0;
+    position: relative;
+    transform: rotate(-4.737deg);
+}
+
+.middle{
+   position: absolute;
+   width:350px;
+   height:350px;
+   border-radius: 50%;
+   background-color: rgba(0, 0, 0, 0.375);
+   top:50%;
+   left:50%;
+   transform: translate(-50%,-50%);
+   z-index: 1;
+}
+
+.dataTable{
+    padding:50px;
+    background-color: rgba(2, 59, 14,0.85);
+    width:40%;
+    min-width: 30px;
+    color:#fff;
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around ;
+    align-items: start;
+    flex:1;
+    user-select: none;
+}
+
+h1{
+    font-size:50px;
+}
+
+h2{
+    font-size: 30px;
+}
+
+
+@media screen and (max-width: 1900px) { 
+    h1{
+        font-size:45px;
+    }   
+    h2{
+        font-size: 27px;
+    }
+}
+
+
+ @media screen and (max-width: 1800px) {
+    .wheelandTable {
+        max-height: 600px;
+  }
+}
+
+@media screen and (max-width: 1750px) {
+    h1{
+        font-size:40px;
+    }
+    h2{
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 1590px) {
+    h1{
+        font-size:35px;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .wheelandTable {
+        max-height: 500px;
+  }
+    .arrow{
+        width: 20px;
+    }
+}
+@media screen and (max-width: 1450px) {
+    h1{
+        font-size:30px;
+    }
+}
+
+
+@media screen and (max-width: 1300px) {
+    .wheelandTable {
+        max-height: 430px;
+       
+  }
+  .wrapper{
+    padding:35px;
+}
+.arrow{
+    margin-top: -16px;
+}
+  h1{
+    font-size:24px;
+}
+}
+  
+@media screen and (max-width: 755px) {
+    .wrapper{
+        width: 50%;
+        padding:15px;
+    }
+    .arrow{
+        margin-top: 10px;
+    }
+    .dataTable{
+        padding:40px;
+        width: 50%;
+    }
+}
+
+
+
+@media screen and (max-width: 700px) {
+
+    h1{
+        font-size:20px;
+    }
+    h2{
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    h1{
+        font-size:15px;
+    }
+    
+    h2{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wheelandTable{
+        flex-direction: column;
+        min-height: 700px;
+    }
+    .wrapper{
+        width: 100%;
+        padding:40px;
+    }
+    /* .canvas{
+        max-width:400px;
+        max-height:400px;
+    } */
+    .dataTable{
+        flex-direction: row;
+        width:100%;
+        padding:0;
+        min-width:360px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .wheelandTable{
+        min-height: 650px;
+    }
+  
+}
+
+@media screen and (max-width: 500px) {
+    .wheelandTable{
+        min-height: 600px;
+    }
+  
+}
+
+
+@media screen and (max-width: 450px) {
+    .wheelandTable{
+        min-height: 550px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .wheelandTable{
+        min-height: 520px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .wheelandTable{
+        min-height: 480px;
+    }
+}

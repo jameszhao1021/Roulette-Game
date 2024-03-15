@@ -1,0 +1,194 @@
+.buttonArea{
+    display: flex;
+    align-items: center;
+    background-color: rgba(2, 59, 14,0.85);
+    max-width: 1730px;
+    max-height:120px; 
+    min-width: 360px;
+    height:10vh;
+    border-left: 4px solid #fff;
+    border-right: 4px solid #fff;
+    justify-content: center;
+    margin: auto;
+}
+
+.chip{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width:50px;
+    height:50px;
+    background-color: #e0e0e0; /* Background color */
+    color: #333; /* Text color */
+    border: 10px solid rgb(214, 202, 30);
+    font-family: Arial, sans-serif; /* Font */
+    font-size: 12px;
+    box-shadow: 7px 2px 10px #0404043a;
+    user-select: none;
+  }
+
+.chipforDemo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:80px;
+    max-width: 7.5vh;
+    height:80px;
+    max-height:7.5vh;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    color: #333;
+    border: 15px solid rgb(214, 202, 30); /* Border */
+    font-family: Arial, sans-serif;
+    font-size: 20px; /* Font size */
+    box-shadow: 7px 2px 10px #0404043a;
+    margin:0 10px;
+    user-select: none;
+  }
+
+.selectedChip{
+    border: 15px solid rgb(147, 139, 15);
+ }
+
+
+.button, .soundEffect{
+    font-size: 20px;
+    height:80px;  
+    max-height:7.5vh;
+    width:100px;
+    max-width: 9.4vh;
+    line-height: 1;
+    margin:0 10px;
+    border-radius: 25%;
+    box-shadow: 7px 2px 10px #0404043a;
+    background-color: #eae4e4;
+}
+
+.soundEffect{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+
+@media screen and (max-width: 1800px) {
+    .chipforDemo {
+        width:60px;
+        height:60px;
+        font-size: 15px;
+        border: 12px solid rgb(214, 202, 30);
+    }
+    .button, .soundEffect{
+        height:64px;  
+        width:80px;
+        font-size: 15px;
+    }
+    .buttonArea{
+        max-height:100px; 
+    }
+    .chip{
+        width: 45px;
+        height:45px;
+        border: 9px solid rgb(214, 202, 30);
+    }
+  }
+
+  @media screen and (max-width: 1300px) {
+
+    .buttonArea{
+        max-height:80px; 
+    }
+    .chip{
+        width: 40px;
+        height:40px;
+    }
+    .chipforDemo {
+        width:50px;
+        height:50px;
+        font-size: 12px;
+        border: 10px solid rgb(214, 202, 30);
+    }
+    .button, .soundEffect{
+        height:50px;  
+        width:66px;
+        font-size: 12px;
+    }
+  }
+
+
+  @media screen and (max-width: 800px) {
+    .chip{
+        width: 30px;
+        height:30px;
+        border: 7px solid rgb(214, 202, 30);
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .chipforDemo {
+        width:45px;
+        height:45px;
+        font-size: 10px;
+        border: 8px solid rgb(214, 202, 30);
+    }
+    .button, .soundEffect{
+        height:45px;  
+        width:56px;
+        font-size: 10px;
+    }
+  }
+  @media screen and (max-width: 640px) {
+    .chipforDemo {
+        width:40px;
+        height:40px;
+        font-size: 10px;
+        border: 7px solid rgb(214, 202, 30);
+    }
+    .button, .soundEffect{
+        height:40px;  
+        width:50px;
+        font-size: 10px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .buttonArea {
+       flex-direction: column;
+       min-height: 140px;
+    }
+    .buttonsArea{
+        margin-top: 10px;
+    }
+    .chipforDemo {
+        width:50px;
+        height:50px;
+        font-size: 12px;
+        border: 10px solid rgb(214, 202, 30);
+    }
+    .button, .soundEffect{
+        height:50px;  
+        width:66px;
+        font-size: 12px;
+    }
+  }
+  
+  @media screen and (max-width: 450px) {
+    .chipforDemo {
+        width:45px;
+        height:45px;
+        font-size: 10px;
+        border: 8px solid rgb(214, 202, 30);
+    }
+    .button, .soundEffect{
+        height:45px;  
+        width:56px;
+        font-size: 10px;
+    }
+  }
+  
