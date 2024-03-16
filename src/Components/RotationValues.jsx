@@ -1,4 +1,3 @@
-
 const rotationValues = [
     { miniDegree: 0, maxDegree: 4.737, value: '0' },
     { miniDegree: 4.738, maxDegree: 14.212, value: '2' },
