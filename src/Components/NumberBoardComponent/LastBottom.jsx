@@ -63,35 +63,3 @@ export default LastBottom;
 
 
 
-// function LastBottom({prop}){
-//     const arrayofLastBottom = ['1 to 18', 'Even', 'Red', 'Black', 'Odd', '19 to 36'];
-//     const lastBottomElements = [];
-//     for (let i = 0; i < arrayofLastBottom.length; i++){
-//         lastBottomElements.push(<div key={i} className='lastBottomBlock' id={`lastBottom_${i}`} onClick={(e)=>{lastBottomClick(i, e)}}>
-//             <div className='lastBottomBlockCon'>{arrayofLastBottom[i]}</div>
-//         </div>)
-//     }
-
-//     function lastBottomClick(i, e){
-//         const clickedElement = e.currentTarget;
-//         var num = (i === 0) ? prop.filter(num => num <= 18).join(',') :
-//         (i === 1) ? prop.filter(num => num % 2 === 0).join(',') :
-//             (i === 2) ? '1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36' :
-//                 (i === 3) ? '2,4,6,8,10,11,13,15,17,20,22,24,26,28,29,31,33,35' :
-//                     (i === 4) ? prop.filter(num => num % 2 !== 0).join(',') :
-//                         prop.filter(num => num > 18).join(',');
-//             setBet(num, 'oerb', 1, clickedElement)
-//     }
-//     return(
-//         <div className="lastBottom">
-//             {lastBottomElements}
-//         </div>
-//     )
-// }
-
-
-
-// export default LastBottom;
-
-
-

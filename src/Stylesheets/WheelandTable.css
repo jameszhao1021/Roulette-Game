@@ -3,7 +3,7 @@
     max-width: 1730px;
     border: 4px solid #fff;
     border-bottom: none;
-    max-height:750px;
+    max-height:730px;
     height:50vh;
     min-width: 360px;
     margin: auto;
@@ -106,18 +106,16 @@ h2{
     font-size: 30px;
 }
 
-
 @media screen and (max-width: 1900px) { 
     h1{
         font-size:45px;
     }   
     h2{
         font-size: 27px;
-    }
+    }  
 }
 
-
- @media screen and (max-width: 1800px) {
+@media screen and (max-width: 1800px) {
     .wheelandTable {
         max-height: 600px;
   }

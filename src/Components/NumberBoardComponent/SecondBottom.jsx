@@ -3,7 +3,7 @@ import React from 'react';
 
 
 
-function SecondBottom(props){
+function SecondBottom({addCom,totalChipValues,updateTotalChipValue,setTotalChipValues,singleChipValue, winNumber}){
     const prefix = "secondBottom"
     const arrayofSecondBottom = ['1 to 12', '13 to 24', '25 to 36'];
 
@@ -15,9 +15,9 @@ function SecondBottom(props){
                    :`${index}` == 1 ? Array.from({length: 12}, (_, i) => i + 13)
                    : Array.from({length: 12}, (_, i) => i + 25)
         const odd = 2;
-        const totalChipValue = (props.totalChipValues[id] || 0) + props.singleChipValue;
-        props.updateTotalChipValue(id);
-        props.addCom(selectedNum, id, odd, totalChipValue, event);
+        const totalChipValue = (totalChipValues[id] || 0) + singleChipValue;
+        updateTotalChipValue(id);
+        addCom(selectedNum, id, odd, totalChipValue, event);
     };
 
     const removeSecondBottomClick = (index, event) => {
@@ -27,17 +27,15 @@ function SecondBottom(props){
         const selectedNum = `${index}` == 0 ? Array.from({length: 12}, (_, i) => i + 1)
                     :`${index}` == 1 ? Array.from({length: 12}, (_, i) => i + 13)
                     : Array.from({length: 12}, (_, i) => i + 25)
-        const totalChipValue = props.totalChipValues[id] || 0;
-        props.addCom(selectedNum, id, odd, totalChipValue, event);
+        const totalChipValue = totalChipValues[id] || 0;
+        addCom(selectedNum, id, odd, totalChipValue, event);
         // Toggle chip visibility based on right-click event
         if (event.button === 2 && totalChipValue > 0) {
-            const updatedTotalChipValues = { ...props.totalChipValues }; // Copy the state
+            const updatedTotalChipValues = { ...totalChipValues }; // Copy the state
             updatedTotalChipValues[id] = 0; // Set chip value to 0
-            props.setTotalChipValues(updatedTotalChipValues); // Update the state
+            setTotalChipValues(updatedTotalChipValues); // Update the state
         }
     };
-
-
 
     return(
         <div className="secondBottom">
@@ -48,8 +46,8 @@ function SecondBottom(props){
                     onContextMenu={(event)=>{removeSecondBottomClick(index, event)}}
                     >
                      <div className='secondBottomBlockCon'> {num}</div>
-                     {props.totalChipValues[`${prefix}_${index}`] > 0 && 
-                     <div className='chip'>{props.totalChipValues[`${prefix}_${index}`]}</div>}
+                     {totalChipValues[`${prefix}_${index}`] > 0 && 
+                     <div className='chip'>{totalChipValues[`${prefix}_${index}`]}</div>}
                     </div> 
                 ))
             }
@@ -57,38 +55,4 @@ function SecondBottom(props){
     )
 }
 
-
-
 export default SecondBottom;
-
-
-
-
-
-
-// function SecondBottom({prop}){
-   
-//     const arrayofSecondBottom = ['1 to 12', '13 to 24', '25 to 36'];
-//     const secondBottomElements = [];
-//     for(let i=0; i < 3; i++){
-//         secondBottomElements.push(<div key={i} id={`secondBottom_${i}`} className='secondBottomBlock' onClick={(e)=>{secondBottomClick(i, e)}}>
-//              <div className='secondBottomBlockCon'>{arrayofSecondBottom[i]}</div>
-//         </div>)
-//     }
-
-//     function secondBottomClick(i, e){
-//         const clickedElement = e.currentTarget;
-//         setBet(prop.filter(num => (num > (12 * i) && num <= (12 * (i + 1)))).join(','), 'dozen', 2, clickedElement);
-//     }
-
-//     return(
-//         <div className="secondBottom">
-//              {secondBottomElements}
-//         </div>
-//     )
-// }
-
-
-
-// export default SecondBottom;
-

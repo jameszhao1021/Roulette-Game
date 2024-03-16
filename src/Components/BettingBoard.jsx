@@ -4,10 +4,6 @@ import WinningLines from './WinningLines';
 import '../Stylesheets/BettingBoard.css';
 
 function BettingBoard({singleChipValue,winNumber, selectedCombination, setSelectedCombination, totalChipValues, setTotalChipValues, setCurrentBet, setBalance, balance}){
-    
-   
-    
-
    
     function addCombination(num, id, odd, totalValue, event){
         const newCombination = {num:num, id:id, odd:odd, totalValue:totalValue};
@@ -76,46 +72,3 @@ function BettingBoard({singleChipValue,winNumber, selectedCombination, setSelect
 }
 
 export default BettingBoard;
-
-
-
-// original
-
-
-
-// function BettingBoard(){
-//     const singleChipValue = 100;
-//     const [selectedCombination, setSelectedCombination] = useState([]);
-//     const [elementChipValues, setElementChipValues] = useState({});
-
-//     function addCombination(newCombination){
-      
-//         setSelectedCombination([...selectedCombination, newCombination]);
-//     }
-
-//     const updateTotalChipValue = (id) => {
-//         setElementChipValues(prevState => ({
-//             ...prevState,
-//             [id]: (prevState[id] || 0) + singleChipValue
-//         }));
-//     };
-
-
-
-
-//     useEffect(() => {
-//         if (selectedCombination.length > 0) {
-//             console.log('Latest selected combination:', selectedCombination);
-//         }
-//     }, [selectedCombination]); // Run this effect whenever selectedCombination changes
-
-//     return(
-//         <div className="bettingBoard">
-//             <NumberBoard addCom={addCombination}/>
-//             <WinningLines addCom={addCombination}/>
-//         </div>
-//     )
-// }
-
-
-// export default BettingBoard;

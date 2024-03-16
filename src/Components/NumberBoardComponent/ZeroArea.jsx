@@ -51,38 +51,4 @@ function ZeroArea({addCom,totalChipValues,updateTotalChipValue,setTotalChipValue
 
 }
 
-
-
 export default ZeroArea;
-
-
-// function ZeroArea(){
-//     const listofZero = ['00', '0'];
-//     const zeroAreaElements = []
-//     for(let i = 0; i < listofZero.length; i++){
-//         zeroAreaElements.push(
-//             <div key={i} className='zeroBlock'id={`zeroBlock_${i}`} onClick={(e)=>{zeroBlockClick(i,e)}}>
-//                 <div className="zeroBlockNum">{listofZero[i]}</div>
-//             </div>
-//         )
-//     }
-
-//     function zeroBlockClick(i, e){
-//         const clickedElement = e.currentTarget;
-//         var num = listofZero[i];
-//         var odd = 35;
-//         var objType = 'straight';
-//         setBet(num, objType, odd, clickedElement);
-//     }
-
-//     return(
-//         <div className="zeroArea">
-//            {zeroAreaElements}
-//         </div>
-//     )
-
-// }
-
-
-
-// export default ZeroArea;
