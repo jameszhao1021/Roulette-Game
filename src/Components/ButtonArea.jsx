@@ -4,7 +4,7 @@ import '../Stylesheets/ButtonArea.css';
 import rouletteSound from '../Assets/rouletteSound.mp3';
 import Alert from './Alert';
 
-function ButtonArea({myChart, setSingleChipValue, setWinNumber,selectedCombination, setSelectedCombination, setTotalChipValues, balance, setBalance, currentBet, win, setWin, lost, setLost, netGain, setNetGain, totalWin, setTotalWin, totalLost, setTotalLost}){
+function ButtonArea({myChart, setSingleChipValue, setWinNumber,selectedCombination, setSelectedCombination, setTotalChipValues, balance, setBalance, currentBet, win, setWin, lost, setLost, netGain, setNetGain, totalWin, setTotalWin, totalLost, setTotalLost, setEnableChip}){
     const initialBalance = 10000;
     const [isChecked, setIsChecked] = useState(true);
     const handleCheckboxChange = () => {
@@ -93,13 +93,15 @@ function ButtonArea({myChart, setSingleChipValue, setWinNumber,selectedCombinati
                 <input
                         type="checkbox"
                         id="myCheckbox"
-                        checked={isChecked}  
+                        checked={isChecked}
+                        //Ensure sould can be toggled by both checkbox and button with showing an error  
+                        onChange={()=>('')}
                     />
                 Enable Sound
            </button>
            <button className="button" id="restart" onClick={restart} disabled={isDisabled}>Restart</button>
            <button className="button" id="deleteAll" onClick={deleteAll} disabled={isDisabled}>Delete All</button>
-           <SpinWheel myChart={myChart}  setWinNumber={setWinNumber} selectedCombination={selectedCombination} setSelectedCombination={setSelectedCombination} setTotalChipValues={setTotalChipValues} balance={balance} setBalance={setBalance} win={win} setWin={setWin} lost={lost} setLost={setLost} currentBet={currentBet} netGain={netGain} setNetGain={setNetGain} totalWin={totalWin} setTotalWin={setTotalWin} totalLost={totalLost} setTotalLost={setTotalLost} isDisabled={isDisabled} setIsDisabled={setIsDisabled} audioRef={audioRef} setShowAlert={setShowAlert}/>
+           <SpinWheel myChart={myChart}  setWinNumber={setWinNumber} selectedCombination={selectedCombination} setSelectedCombination={setSelectedCombination} setTotalChipValues={setTotalChipValues} balance={balance} setBalance={setBalance} win={win} setWin={setWin} lost={lost} setLost={setLost} currentBet={currentBet} netGain={netGain} setNetGain={setNetGain} totalWin={totalWin} setTotalWin={setTotalWin} totalLost={totalLost} setTotalLost={setTotalLost} isDisabled={isDisabled} setIsDisabled={setIsDisabled} audioRef={audioRef} setShowAlert={setShowAlert} setEnableChip={setEnableChip}/>
            </div>
         </div>
      </>

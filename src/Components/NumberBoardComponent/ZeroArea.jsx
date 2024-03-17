@@ -1,20 +1,25 @@
 import React from 'react';
 
-function ZeroArea({addCom,totalChipValues,updateTotalChipValue,setTotalChipValues,singleChipValue, winNumber}){
+function ZeroArea({addCom, totalChipValues, updateTotalChipValue, setTotalChipValues, singleChipValue, winNumber, enableChip}){
     const prefix = "zeroArea";
     const listofZero = ['00', '0'];
 
     const zeroBlockClick = (index, event) => {
+        if(enableChip == true){
         const id = `${prefix}_${index}`;
         const selectedNum = `${index}` == 0 ? ["00"]:[0];
         const odd = 35;
         const totalChipValue = (totalChipValues[id] || 0) + singleChipValue;
         updateTotalChipValue(id);
         addCom(selectedNum, id, odd, totalChipValue, event);
+        }else{
+           return;
+        }
     };
 
    function removeSelectedBlocks(index, event){
     event.preventDefault(); // Prevent the default context menu
+    if(enableChip == true){
     const id = `${prefix}_${index}`;
     const odd = 35;
     const selectedNum = `${index}` == 0 ? ["00"]:[0];
@@ -25,6 +30,9 @@ function ZeroArea({addCom,totalChipValues,updateTotalChipValue,setTotalChipValue
         const updatedTotalChipValues = { ...totalChipValues }; // Copy the state
         updatedTotalChipValues[id] = 0; // Set chip value to 0
         setTotalChipValues(updatedTotalChipValues); // Update the state
+    }
+    }else{
+       return;
     }
    }
 

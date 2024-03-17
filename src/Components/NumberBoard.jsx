@@ -3,8 +3,7 @@ import TopArea from './NumberBoardComponent/TopArea';
 import SecondBottom from './NumberBoardComponent/SecondBottom';
 import LastBottom from './NumberBoardComponent/LastBottom';
 
-function NumberBoard({addCom,totalChipValues,updateTotalChipValue,setTotalChipValues,singleChipValue, winNumber}){
-    const arrayofNumber = Array.from({ length: 36 }, (_, index) => index + 1);
+function NumberBoard({addCom, totalChipValues, updateTotalChipValue, setTotalChipValues, singleChipValue, winNumber, enableChip}){
 
     return(
         <div className="numberBoard">
@@ -15,22 +14,23 @@ function NumberBoard({addCom,totalChipValues,updateTotalChipValue,setTotalChipVa
                updateTotalChipValue={updateTotalChipValue}  
                setTotalChipValues={setTotalChipValues} 
                singleChipValue={singleChipValue}
+               enableChip={enableChip}
             />
             <SecondBottom  
-               prop={arrayofNumber} 
                addCom={addCom} 
                totalChipValues={totalChipValues} 
                updateTotalChipValue={updateTotalChipValue}  
                setTotalChipValues={setTotalChipValues} 
                singleChipValue={singleChipValue}
+               enableChip={enableChip}
             />
             <LastBottom  
-               prop={arrayofNumber} 
                addCom={addCom} 
                totalChipValues={totalChipValues} 
                updateTotalChipValue={updateTotalChipValue}  
                setTotalChipValues={setTotalChipValues} 
                singleChipValue={singleChipValue}
+               enableChip={enableChip}
             />
         </div>
     )

@@ -1,8 +1,6 @@
 import React from 'react';
 
-
-
-function CornerBetL({addCom,totalChipValues,updateTotalChipValue,setTotalChipValues,singleChipValue, winNumber}){
+function CornerBetL({addCom, totalChipValues, updateTotalChipValue, setTotalChipValues, singleChipValue, enableChip}){
     const prefix = "cornerBlock"
     var listofNumber = [
         [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
@@ -10,9 +8,8 @@ function CornerBetL({addCom,totalChipValues,updateTotalChipValue,setTotalChipVal
         [24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]
     ];
 
-
-
     const cornerClick = (count, rowIndex, colIndex, event) => {
+        if(enableChip == true){
         const id = `${prefix}_${rowIndex}_${colIndex}`;
         let selectedNum;
         let odd;
@@ -56,11 +53,15 @@ function CornerBetL({addCom,totalChipValues,updateTotalChipValue,setTotalChipVal
         const totalChipValue = (totalChipValues[id] || 0) + singleChipValue;
         updateTotalChipValue(id);
         addCom(selectedNum, id, odd, totalChipValue, event);
+        }else{
+           return;
+        }
     };
 
 
     const removeSelectedBlocksItem = (count, rowIndex, colIndex, event) => {
         event.preventDefault();
+        if(enableChip == true){
         const id = `${prefix}_${rowIndex}_${colIndex}`;
         let selectedNum;
         let odd;
@@ -108,6 +109,9 @@ function CornerBetL({addCom,totalChipValues,updateTotalChipValue,setTotalChipVal
             const updatedTotalChipValues = { ...totalChipValues }; // Copy the state
             updatedTotalChipValues[id] = 0; // Set chip value to 0
             setTotalChipValues(updatedTotalChipValues); // Update the state
+        }
+        }else{
+           return;
         }
     };
   

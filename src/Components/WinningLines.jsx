@@ -4,36 +4,40 @@ import HLineTwoMiddleL from './WinningLines/HLineTwoMiddle';
 import VLineTwoMiddleL from './WinningLines/VLineTwoMiddle';
 import CornerBetL from './WinningLines/CornerBetL';
 
-function WinningLines(props){
+function WinningLines({addCom, totalChipValues, updateTotalChipValue, setTotalChipValues, singleChipValue, enableChip}){
     return(
         <div className='winningLines'>
            <ZeroAreaBlockL 
-              addCom = {props.addCom} 
-              totalChipValues={props.totalChipValues} 
-              updateTotalChipValue={props.updateTotalChipValue} 
-              setTotalChipValues={props.setTotalChipValues} 
-              singleChipValue={props.singleChipValue}          
+              addCom = {addCom} 
+              totalChipValues={totalChipValues} 
+              updateTotalChipValue={updateTotalChipValue} 
+              setTotalChipValues={setTotalChipValues} 
+              singleChipValue={singleChipValue}     
+              enableChip={enableChip}
            />
            <HLineTwoMiddleL
-              addCom = {props.addCom} 
-              totalChipValues={props.totalChipValues} 
-              updateTotalChipValue={props.updateTotalChipValue} 
-              setTotalChipValues={props.setTotalChipValues} 
-              singleChipValue={props.singleChipValue}
+              addCom = {addCom} 
+              totalChipValues={totalChipValues} 
+              updateTotalChipValue={updateTotalChipValue} 
+              setTotalChipValues={setTotalChipValues} 
+              singleChipValue={singleChipValue}
+              enableChip={enableChip}
            />
            <VLineTwoMiddleL 
-              addCom = {props.addCom} 
-              totalChipValues={props.totalChipValues} 
-              updateTotalChipValue={props.updateTotalChipValue} 
-              setTotalChipValues={props.setTotalChipValues} 
-              singleChipValue={props.singleChipValue}
+              addCom = {addCom} 
+              totalChipValues={totalChipValues} 
+              updateTotalChipValue={updateTotalChipValue} 
+              setTotalChipValues={setTotalChipValues} 
+              singleChipValue={singleChipValue}
+              enableChip={enableChip}
            />
            <CornerBetL
-              addCom = {props.addCom} 
-              totalChipValues={props.totalChipValues} 
-              updateTotalChipValue={props.updateTotalChipValue} 
-              setTotalChipValues={props.setTotalChipValues} 
-              singleChipValue={props.singleChipValue} 
+              addCom = {addCom} 
+              totalChipValues={totalChipValues} 
+              updateTotalChipValue={updateTotalChipValue} 
+              setTotalChipValues={setTotalChipValues} 
+              singleChipValue={singleChipValue} 
+              enableChip={enableChip}
           />
         </div>
     )

@@ -3,7 +3,7 @@ import NumberBoard from './NumberBoard';
 import WinningLines from './WinningLines';
 import '../Stylesheets/BettingBoard.css';
 
-function BettingBoard({singleChipValue,winNumber, selectedCombination, setSelectedCombination, totalChipValues, setTotalChipValues, setCurrentBet, setBalance, balance}){
+function BettingBoard({singleChipValue,winNumber, selectedCombination, setSelectedCombination, totalChipValues, setTotalChipValues, setCurrentBet, setBalance, balance, enableChip}){
    
     function addCombination(num, id, odd, totalValue, event){
         const newCombination = {num:num, id:id, odd:odd, totalValue:totalValue};
@@ -20,7 +20,6 @@ function BettingBoard({singleChipValue,winNumber, selectedCombination, setSelect
          }
 
         }else if (event.button === 2){
-            
             setSelectedCombination(prevCombination=> prevCombination.filter(item=>item.id!==newCombination.id));
             const deleteBetValue = newCombination.totalValue;
             setBalance(prev=>prev+deleteBetValue)
@@ -36,7 +35,6 @@ function BettingBoard({singleChipValue,winNumber, selectedCombination, setSelect
     }else{
         return
      }
-
     };
 
     useEffect(() => {
@@ -57,7 +55,7 @@ function BettingBoard({singleChipValue,winNumber, selectedCombination, setSelect
                updateTotalChipValue={updateTotalChipValue}  
                setTotalChipValues={setTotalChipValues} 
                singleChipValue={singleChipValue}
-               
+               enableChip={enableChip}
             />
             <WinningLines 
                addCom={addCombination} 
@@ -65,7 +63,7 @@ function BettingBoard({singleChipValue,winNumber, selectedCombination, setSelect
                updateTotalChipValue={updateTotalChipValue}  
                setTotalChipValues={setTotalChipValues} 
                singleChipValue={singleChipValue}
-              
+               enableChip={enableChip}
             />
         </div>
     )

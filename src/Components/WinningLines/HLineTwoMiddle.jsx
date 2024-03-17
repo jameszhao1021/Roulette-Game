@@ -2,7 +2,7 @@ import React from 'react';
 
 
 
-function HLineTwoMiddleL({addCom,totalChipValues,updateTotalChipValue,setTotalChipValues,singleChipValue, winNumber}){
+function HLineTwoMiddleL({addCom, totalChipValues, updateTotalChipValue, setTotalChipValues, singleChipValue, enableChip}){
     const prefix = "hLineTwoMiddleB"
     var listofNumber = [
         [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
@@ -11,6 +11,7 @@ function HLineTwoMiddleL({addCom,totalChipValues,updateTotalChipValue,setTotalCh
     ];
 
     const hLineClick = (rowIndex, colIndex, event) => {
+        if(enableChip == true){
         const id = `${prefix}_${rowIndex}_${colIndex}`;
         let  selectedNum
         if (rowIndex == 0 || rowIndex == 1) {
@@ -27,10 +28,14 @@ function HLineTwoMiddleL({addCom,totalChipValues,updateTotalChipValue,setTotalCh
         const totalChipValue = (totalChipValues[id] || 0) + singleChipValue;
         updateTotalChipValue(id);
         addCom(selectedNum, id, odd, totalChipValue, event);
+        }else{
+           return;
+        }
     };
 
     const removeSelectedBlocksItem = (rowIndex, colIndex, event) => {
         event.preventDefault();
+        if(enableChip == true){
         const id = `${prefix}_${rowIndex}_${colIndex}`;
         let  selectedNum
         if (rowIndex == 0 || rowIndex == 1) {
@@ -51,6 +56,9 @@ function HLineTwoMiddleL({addCom,totalChipValues,updateTotalChipValue,setTotalCh
             const updatedTotalChipValues = { ...totalChipValues }; // Copy the state
             updatedTotalChipValues[id] = 0; // Set chip value to 0
             setTotalChipValues(updatedTotalChipValues); // Update the state
+        }
+        }else{
+           return;
         }
     };
 

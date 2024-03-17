@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import rotationValues from "./RotationValues";
 
-function SpinWheel({myChart, setWinNumber, selectedCombination, setSelectedCombination, setTotalChipValues, balance, setBalance, win, setWin, lost, setLost, currentBet, setNetGain, totalWin, setTotalWin, totalLost, setTotalLost, isDisabled, setIsDisabled, audioRef, setShowAlert}) {
+function SpinWheel({myChart, setWinNumber, selectedCombination, setSelectedCombination, setTotalChipValues, balance, setBalance, win, setWin, lost, setLost, currentBet, setNetGain, totalWin, setTotalWin, totalLost, setTotalLost, isDisabled, setIsDisabled, audioRef, setShowAlert, setEnableChip}) {
     const initialBalance = 10000;
     const btn = useRef(null)
     
@@ -14,7 +14,7 @@ function SpinWheel({myChart, setWinNumber, selectedCombination, setSelectedCombi
          audioRef.current.play();
 
         toggleDisabled();    
-        
+        setEnableChip(false);
         const startAngle = 0;
         const endAngle = parseFloat((Math.random() * (4000 - 3000) + 3000).toFixed(3));
         const startTime = performance.now();
@@ -43,7 +43,8 @@ function SpinWheel({myChart, setWinNumber, selectedCombination, setSelectedCombi
             setTimeout(() => {
                 setTotalChipValues({});
                 toggleDisabled();
-                setWinNumber('')
+                setWinNumber('');
+                setEnableChip(true);
             }, 3000); // Timeout duration after showResult
         }, 10000);
       }else{

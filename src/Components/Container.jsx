@@ -17,14 +17,15 @@ function Container(){
     const [netGain, setNetGain] = useState(0);
     const [totalWin, setTotalWin] = useState(0);
     const [totalLost, setTotalLost] = useState(0);
-    
+    const [enableChip, setEnableChip] = useState (true)
+
     return(  
         <div className='outerContainer justify-content-center'>
             <div className='row justify-content-center '>      
                <div className='col-xl-8 col-lg-10 col-md-12'>  
                     <WheelandTable setMyChart={setMyChart} currentBet={currentBet} balance={balance} win={win} lost={lost} netGain={netGain} setNetGain={setNetGain} totalWin={totalWin} totalLost={totalLost}/>
-                    <ButtonArea myChart={myChart} setSingleChipValue={setSingleChipValue} setWinNumber={setWinNumber} setSelectedCombination={setSelectedCombination} setTotalChipValues={setTotalChipValues} balance={balance} setBalance={setBalance} win={win} setWin={setWin} selectedCombination={selectedCombination} currentBet={currentBet} lost={lost} setLost={setLost} netGain={netGain} setNetGain={setNetGain} totalWin={totalWin} setTotalWin={setTotalWin} totalLost={totalLost} setTotalLost={setTotalLost}/>
-                    <BettingBoard singleChipValue={singleChipValue} winNumber={winNumber} selectedCombination={selectedCombination} setSelectedCombination={setSelectedCombination} totalChipValues={totalChipValues} setTotalChipValues={setTotalChipValues} setCurrentBet={setCurrentBet} setBalance={setBalance} currentBet={currentBet} balance={balance} setWin={setWin} /> 
+                    <ButtonArea myChart={myChart} setSingleChipValue={setSingleChipValue} setWinNumber={setWinNumber} setSelectedCombination={setSelectedCombination} setTotalChipValues={setTotalChipValues} balance={balance} setBalance={setBalance} win={win} setWin={setWin} selectedCombination={selectedCombination} currentBet={currentBet} lost={lost} setLost={setLost} netGain={netGain} setNetGain={setNetGain} totalWin={totalWin} setTotalWin={setTotalWin} totalLost={totalLost} setTotalLost={setTotalLost} setEnableChip={setEnableChip}/>
+                    <BettingBoard singleChipValue={singleChipValue} winNumber={winNumber} selectedCombination={selectedCombination} setSelectedCombination={setSelectedCombination} totalChipValues={totalChipValues} setTotalChipValues={setTotalChipValues} setCurrentBet={setCurrentBet} setBalance={setBalance} currentBet={currentBet} balance={balance} setWin={setWin} enableChip={enableChip}/> 
                </div>     
            </div>
         </div>
