@@ -1,12 +1,8 @@
 import React from 'react';
 
-
-
-
 function ZeroArea({addCom,totalChipValues,updateTotalChipValue,setTotalChipValues,singleChipValue, winNumber}){
     const prefix = "zeroArea";
     const listofZero = ['00', '0'];
-
 
     const zeroBlockClick = (index, event) => {
         const id = `${prefix}_${index}`;

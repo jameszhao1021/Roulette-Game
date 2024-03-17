@@ -134,5 +134,4 @@ function CornerBetL({addCom,totalChipValues,updateTotalChipValue,setTotalChipVal
     )
 }
 
-
 export default CornerBetL;

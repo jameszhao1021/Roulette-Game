@@ -4,7 +4,6 @@ import ButtonArea from './ButtonArea';
 import BettingBoard from './BettingBoard';
 import '../Stylesheets/Container.css';
 
-
 function Container(){
     const [myChart, setMyChart] = useState(null); 
     const [singleChipValue, setSingleChipValue] = useState(100);
@@ -31,6 +30,5 @@ function Container(){
         </div>
     )
 }
-
 
 export default Container;

@@ -1,8 +1,7 @@
 import React from 'react';
 
 function DataTable({currentBet, balance, win, lost, netGain, totalWin, totalLost}){
-   
-    
+
     return(
         <div className="dataTable">
            <h1>BALANCE: <span id="balance">{balance}</span></h1>

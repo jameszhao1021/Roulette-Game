@@ -368,7 +368,6 @@
     border-bottom: 4px solid #fff;
 }
 
-
 .secondBottom>div {
 
     border-right: 4px solid white;
@@ -389,7 +388,6 @@
     border-right: 4px solid white;
 }
 
-
 .zeroArea>div {
     border: 4px solid white;
     border-right: none;
@@ -409,29 +407,29 @@
  @media screen and (max-width: 1800px) {
     .bettingBoard {
         max-height: 480px;
-  }
+   }
   .winningNumber {
     font-size: 50px;
-  }
+   }
 }
 
 @media screen and (max-width: 1450px) {
     .numberBoard {
         font-size:25px;
-  }
+   }
 }
 
 @media screen and (max-width: 1300px) {
-    .bettingBoard {
+   .bettingBoard {
         max-height: 370px;
-  }
+   }
   .winningNumber {
     font-size: 40px;
-}
+   }
   .hLineTwoMiddleB, .vLineTwoMiddleB, .cornerBetB, .zeroAreaBlock {
     width: 25px;
     height: 25px;
-}
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -453,32 +451,86 @@
 }
 @media screen and (max-width: 550px) {
     .numberBoard {
-        font-size:13px;
-       
-  }
+        font-size:13px;   
+    }
   .bettingBoard{
     max-height: 320px;
-  }
+    }
   .hLineTwoMiddleB, .vLineTwoMiddleB, .cornerBetB, .zeroAreaBlock {
     width: 15px;
     height: 15px;
-}
+    }
+    .winningNumber {
+        font-size: 22px;
+    }
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 450px) {
     .numberBoard {
         font-size:10px; 
-  }
+    }
   .bettingBoard{
     max-height: 280px;
-  }
+    }
   .hLineTwoMiddleB, .vLineTwoMiddleB, .cornerBetB, .zeroAreaBlock {
     width: 13px;
     height: 13px;
+    }
+    .winningNumber {
+        font-size: 15px;
+        -webkit-text-stroke: 1px #fff;
+    }
+    .otherNumberRow>div {
+        border-top: 2px solid #fff;
+        border-right: 2px solid #fff;
+    }
+
+    #otherNumberRow_0> :first-child,
+    #otherNumberRow_1> :first-child,
+    #otherNumberRow_2> :first-child {
+        border-left: 2px solid #fff;
+    }
+
+    #otherNumberRow_2>div {
+        border-bottom: 2px solid #fff;
+    }
+
+    #otherNumberRow_2> :last-child {
+        border-bottom: 2px solid #fff;
+    }
+
+
+    .secondBottom>div {
+
+        border-right: 2px solid white;
+    }
+
+    .secondBottom> :first-child {
+        border-left: 2px solid white;
+    }
+
+    .lastBottom>div {
+        border-top: 2px solid white;
+        border-bottom: 2px solid white;
+        border-left: 2px solid white;
+    }
+
+    .lastBottom> :last-child {
+        border-right: 2px solid white;
+    }
+
+    .zeroArea>div {
+        border: 2px solid white;
+        border-right: none;
+    }
 }
-}
+
 @media screen and (max-width: 400px) {
   .bettingBoard{
     max-height: 230px;
   }
+  .winningNumber {
+    font-size: 13px;
+  }
+
 }

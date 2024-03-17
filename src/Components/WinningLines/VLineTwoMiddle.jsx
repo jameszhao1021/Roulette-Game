@@ -32,7 +32,7 @@ function VLineTwoMiddleL({addCom,totalChipValues,updateTotalChipValue,setTotalCh
             selectedNum = [numLeft, numRight];
         }
         const odd = (colIndex == 0 && rowIndex == 1) ? 11 : 17;
-        const totalChipValue = (totalChipValues[id] || 0);
+        const totalChipValue = (totalChipValues[id] || 0) + singleChipValue;
         updateTotalChipValue(id);
         addCom(selectedNum, id, odd, totalChipValue, event);
         }
@@ -60,7 +60,7 @@ function VLineTwoMiddleL({addCom,totalChipValues,updateTotalChipValue,setTotalCh
             selectedNum = [numLeft, numRight];
         }
         const odd = (colIndex == 0 && rowIndex == 1) ? 11 : 17;
-        const totalChipValue = (totalChipValues[id] || 0) + singleChipValue;
+        const totalChipValue = (totalChipValues[id] || 0) ;
         updateTotalChipValue(id);
         addCom(selectedNum, id, odd, totalChipValue, event);
         if (event.button === 2 && totalChipValue > 0) {

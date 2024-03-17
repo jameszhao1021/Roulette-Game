@@ -4,8 +4,6 @@ import HLineTwoMiddleL from './WinningLines/HLineTwoMiddle';
 import VLineTwoMiddleL from './WinningLines/VLineTwoMiddle';
 import CornerBetL from './WinningLines/CornerBetL';
 
-
-
 function WinningLines(props){
     return(
         <div className='winningLines'>
@@ -39,9 +37,6 @@ function WinningLines(props){
           />
         </div>
     )
-
-
 }
-
 
 export default WinningLines;

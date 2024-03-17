@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 function LastBottom(props){
     const prefix = "lastBottom"
     const arrayofLastBottom = ['1 to 18', 'Even', 'Red', 'Black', 'Odd', '19 to 36'];
@@ -56,8 +55,6 @@ function LastBottom(props){
         </div>
     )
 }
-
-
 
 export default LastBottom;
 

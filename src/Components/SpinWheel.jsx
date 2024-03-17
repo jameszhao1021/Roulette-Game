@@ -66,18 +66,18 @@ function SpinWheel({myChart, setWinNumber, selectedCombination, setSelectedCombi
         }
         )
     }
+
     useEffect(()=>{ 
         setNetGain(win-lost);
        
     })
     useEffect(()=>{ 
-        setBalance(initialBalance+totalWin-totalLost)
+        setBalance(initialBalance + totalWin-totalLost)
     },[totalWin, totalLost])
     
     return (
         <button className='button' onClick={startSpin} ref={btn} disabled={isDisabled}>Spin</button>
     );
 }
-
 
 export default SpinWheel;
