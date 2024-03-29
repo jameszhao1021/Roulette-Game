@@ -1,10 +1,10 @@
-# Roullete
+# Roulette
 
-Roullete is a popular casino game. In the game, a player may choose to place a bet on a single number, various groupings of numbers, the color red or black, whether the number is odd or even, or if the numbers are high (19–36) or low (1–18).
+Roulette is a popular casino game. In the game, a player may choose to place a bet on a single number, various groupings of numbers, the color red or black, whether the number is odd or even, or if the numbers are high (19–36) or low (1–18).
 
 ## Screenshot
 
-![Screenshot of the Roullete Game](/src/Assets/screenshot.png)
+![Screenshot of the Roulette Game](/src/Assets/screenshot.png)
 
 ## Technologies Used
 

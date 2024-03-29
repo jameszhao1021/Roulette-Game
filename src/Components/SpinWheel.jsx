@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect } from "react";
 import rotationValues from "./RotationValues";
 
 function SpinWheel({myChart, setWinNumber, selectedCombination, setSelectedCombination, setTotalChipValues, balance, setBalance, win, setWin, lost, setLost, currentBet, setNetGain, totalWin, setTotalWin, totalLost, setTotalLost, isDisabled, setIsDisabled, audioRef, setShowAlert, setEnableChip}) {
