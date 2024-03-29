@@ -12,7 +12,7 @@ HTML, CSS and JavaScript were used in this game.
 
 ## Getting Started
 
-Click https://jameszhao1021.github.io/Roulette-Game to open the browser.
+Click https://jameszhao1021.github.io/roulette to open the browser.
 You can also clone the repository, then run:
 
 ### `npm start`
