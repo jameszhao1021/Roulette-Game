@@ -66,6 +66,7 @@ function ButtonArea({myChart, setSingleChipValue, setWinNumber,selectedCombinati
         setTotalLost(0);
         setSelectedCombination([]); 
         setTotalChipValues({});
+        setSingleChipValue(100);
         classArray.forEach(item => (item.additionalClass = ''));
         classArray[1].additionalClass = 'selectedChip';
     }

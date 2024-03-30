@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/roulette/static/css/main.6e96e30e.css",
-    "main.js": "/roulette/static/js/main.62e15efa.js",
-    "static/js/453.5e595214.chunk.js": "/roulette/static/js/453.5e595214.chunk.js",
-    "static/media/backgroundImg.jpeg": "/roulette/static/media/backgroundImg.486210ef876440807cb0.jpeg",
-    "static/media/rouletteSound.mp3": "/roulette/static/media/rouletteSound.753d41d48abf76d43443.mp3",
-    "static/media/arrow.png": "/roulette/static/media/arrow.1dd8616a2a20db86fa83.png",
-    "index.html": "/roulette/index.html",
-    "main.6e96e30e.css.map": "/roulette/static/css/main.6e96e30e.css.map",
-    "main.62e15efa.js.map": "/roulette/static/js/main.62e15efa.js.map",
-    "453.5e595214.chunk.js.map": "/roulette/static/js/453.5e595214.chunk.js.map"
+    "main.css": "/Roulette-Game/static/css/main.ab0106fe.css",
+    "main.js": "/Roulette-Game/static/js/main.8ed90362.js",
+    "static/js/453.5e595214.chunk.js": "/Roulette-Game/static/js/453.5e595214.chunk.js",
+    "static/media/backgroundImg.jpeg": "/Roulette-Game/static/media/backgroundImg.486210ef876440807cb0.jpeg",
+    "static/media/rouletteSound.mp3": "/Roulette-Game/static/media/rouletteSound.753d41d48abf76d43443.mp3",
+    "static/media/arrow.png": "/Roulette-Game/static/media/arrow.1dd8616a2a20db86fa83.png",
+    "index.html": "/Roulette-Game/index.html",
+    "main.ab0106fe.css.map": "/Roulette-Game/static/css/main.ab0106fe.css.map",
+    "main.8ed90362.js.map": "/Roulette-Game/static/js/main.8ed90362.js.map",
+    "453.5e595214.chunk.js.map": "/Roulette-Game/static/js/453.5e595214.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6e96e30e.css",
-    "static/js/main.62e15efa.js"
+    "static/css/main.ab0106fe.css",
+    "static/js/main.8ed90362.js"
   ]
 }
