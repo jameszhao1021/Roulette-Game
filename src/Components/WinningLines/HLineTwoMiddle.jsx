@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-
 function HLineTwoMiddleL({addCom, totalChipValues, updateTotalChipValue, setTotalChipValues, singleChipValue, enableChip}){
     const prefix = "hLineTwoMiddleB"
     var listofNumber = [
@@ -11,10 +9,10 @@ function HLineTwoMiddleL({addCom, totalChipValues, updateTotalChipValue, setTota
     ];
 
     const hLineClick = (rowIndex, colIndex, event) => {
-        if(enableChip == true){
+        if(enableChip === true){
         const id = `${prefix}_${rowIndex}_${colIndex}`;
         let  selectedNum
-        if (rowIndex == 0 || rowIndex == 1) {
+        if (rowIndex === 0 || rowIndex === 1) {
             const numBottom = ((2 - rowIndex) + (3 * colIndex));
             const numTop = ((3 - rowIndex) + (3 * colIndex));
             selectedNum = [numBottom, numTop];
@@ -24,7 +22,7 @@ function HLineTwoMiddleL({addCom, totalChipValues, updateTotalChipValue, setTota
             const numTop = (3 + (3 * colIndex));
             selectedNum = [numBottom, numMiddle, numTop];
         }
-        const odd = (rowIndex == 2) ? 11 : 17;
+        const odd = (rowIndex === 2) ? 11 : 17;
         const totalChipValue = (totalChipValues[id] || 0) + singleChipValue;
         updateTotalChipValue(id);
         addCom(selectedNum, id, odd, totalChipValue, event);
@@ -35,10 +33,10 @@ function HLineTwoMiddleL({addCom, totalChipValues, updateTotalChipValue, setTota
 
     const removeSelectedBlocksItem = (rowIndex, colIndex, event) => {
         event.preventDefault();
-        if(enableChip == true){
+        if(enableChip === true){
         const id = `${prefix}_${rowIndex}_${colIndex}`;
         let  selectedNum
-        if (rowIndex == 0 || rowIndex == 1) {
+        if (rowIndex === 0 || rowIndex === 1) {
             const numBottom = ((2 - rowIndex) + (3 * colIndex));
             const numTop = ((3 - rowIndex) + (3 * colIndex));
             selectedNum = [numBottom, numTop];
@@ -48,7 +46,7 @@ function HLineTwoMiddleL({addCom, totalChipValues, updateTotalChipValue, setTota
             const numTop = (3 + (3 * colIndex));
             selectedNum = [numBottom, numMiddle, numTop];
         }
-        const odd = (rowIndex == 2) ? 11 : 17;
+        const odd = (rowIndex === 2) ? 11 : 17;
         const totalChipValue = (totalChipValues[id] || 0);
         updateTotalChipValue(id);
         addCom(selectedNum, id, odd, totalChipValue, event);

@@ -55,7 +55,6 @@ function SpinWheel({myChart, setWinNumber, selectedCombination, setSelectedCombi
     function showResult(dataArray, resultAgnle) {
         dataArray.forEach(row => {
             if (resultAgnle > row.miniDegree && resultAgnle < row.maxDegree) {
-               console.log(row.value)
                setWinNumber(row.value)
                const winningCombination = selectedCombination.filter(selected=>selected.num.find(singleNum=>singleNum == row.value));
                const winValue = winningCombination.reduce((acc,item)=>acc + item.odd * item.totalValue, 0);

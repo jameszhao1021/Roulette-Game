@@ -9,7 +9,7 @@ function CornerBetL({addCom, totalChipValues, updateTotalChipValue, setTotalChip
     ];
 
     const cornerClick = (count, rowIndex, colIndex, event) => {
-        if(enableChip == true){
+        if(enableChip === true){
         const id = `${prefix}_${rowIndex}_${colIndex}`;
         let selectedNum;
         let odd;
@@ -58,10 +58,9 @@ function CornerBetL({addCom, totalChipValues, updateTotalChipValue, setTotalChip
         }
     };
 
-
     const removeSelectedBlocksItem = (count, rowIndex, colIndex, event) => {
         event.preventDefault();
-        if(enableChip == true){
+        if(enableChip === true){
         const id = `${prefix}_${rowIndex}_${colIndex}`;
         let selectedNum;
         let odd;

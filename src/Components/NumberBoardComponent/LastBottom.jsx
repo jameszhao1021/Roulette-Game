@@ -5,7 +5,7 @@ function LastBottom({addCom, totalChipValues, updateTotalChipValue, setTotalChip
     const arrayofLastBottom = ['1 to 18', 'Even', 'Red', 'Black', 'Odd', '19 to 36'];
 
     const lastBottomClick = (index, event) => {
-        if(enableChip == true){
+        if(enableChip === true){
         const id = `${prefix}_${index}`;
         const selectedNum = `${index}` == 0 ? Array.from({ length: 18 }, (_, index) => index + 1)
                            :`${index}` == 1 ? Array.from({ length: 18 }, (_, index) => (index + 1) * 2)
@@ -24,7 +24,7 @@ function LastBottom({addCom, totalChipValues, updateTotalChipValue, setTotalChip
 
     const removeSelectedBlocks= (index, event) => {
         event.preventDefault(); // Prevent the default context menu
-        if(enableChip == true){
+        if(enableChip === true){
         const id = `${prefix}_${index}`;
         const odd = 1;
         const selectedNum = `${index}` == 0 ? Array.from({ length: 18 }, (_, index) => index + 1)

@@ -3,7 +3,7 @@ import React from 'react';
 function ZeroAreaBlockL({addCom, totalChipValues, updateTotalChipValue, setTotalChipValues, singleChipValue, enableChip}){
     const prefix = "zeroArea"
     const zeroAreaBlockClick = (event) => {
-        if(enableChip == true){
+        if(enableChip === true){
         const id = `${prefix}`;
         const odd = 17;
         const selectedNum = ["00", 0]
@@ -17,7 +17,7 @@ function ZeroAreaBlockL({addCom, totalChipValues, updateTotalChipValue, setTotal
 
    const removeSelectedBlocks = (event) => {
     event.preventDefault(); // Prevent the default context menu
-    if(enableChip == true){
+    if(enableChip === true){
     const id = `${prefix}`;
     const odd = 17;
     const selectedNum = ["00", 0]

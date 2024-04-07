@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-
 function VLineTwoMiddleL({addCom, totalChipValues, updateTotalChipValue, setTotalChipValues, singleChipValue, enableChip}){
     const prefix = "vLineTwoMiddleB"
     var listofNumber = [
@@ -11,7 +9,7 @@ function VLineTwoMiddleL({addCom, totalChipValues, updateTotalChipValue, setTota
     ];
 
     const vLineClick = (rowIndex, colIndex, event) => {
-        if(enableChip == true){
+        if(enableChip === true){
         const id = `${prefix}_${rowIndex}_${colIndex}`;
         let  selectedNum
         if (colIndex === 0 && rowIndex === 0) {
@@ -32,7 +30,7 @@ function VLineTwoMiddleL({addCom, totalChipValues, updateTotalChipValue, setTota
             const numRight = (3 + (3 * colIndex)) - (rowIndex);
             selectedNum = [numLeft, numRight];
         }
-        const odd = (colIndex == 0 && rowIndex == 1) ? 11 : 17;
+        const odd = (colIndex === 0 && rowIndex === 1) ? 11 : 17;
         const totalChipValue = (totalChipValues[id] || 0) + singleChipValue;
         updateTotalChipValue(id);
         addCom(selectedNum, id, odd, totalChipValue, event);
@@ -43,7 +41,7 @@ function VLineTwoMiddleL({addCom, totalChipValues, updateTotalChipValue, setTota
         
     const removeSelectedBlocksItem = (rowIndex, colIndex, event) => {
         event.preventDefault();
-        if(enableChip == true){
+        if(enableChip === true){
         const id = `${prefix}_${rowIndex}_${colIndex}`;
         let  selectedNum
         if (colIndex === 0 && rowIndex === 0) {
@@ -64,7 +62,7 @@ function VLineTwoMiddleL({addCom, totalChipValues, updateTotalChipValue, setTota
             const numRight = (3 + (3 * colIndex)) - (rowIndex);
             selectedNum = [numLeft, numRight];
         }
-        const odd = (colIndex == 0 && rowIndex == 1) ? 11 : 17;
+        const odd = (colIndex === 0 && rowIndex === 1) ? 11 : 17;
         const totalChipValue = (totalChipValues[id] || 0) ;
         updateTotalChipValue(id);
         addCom(selectedNum, id, odd, totalChipValue, event);

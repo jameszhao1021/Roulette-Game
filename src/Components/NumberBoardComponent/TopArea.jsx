@@ -2,7 +2,6 @@ import React from 'react';
 import ZeroArea from './ZeroArea';
 import OtherNumber from './OtherNumber'; 
 
-
 function TopArea({addCom, totalChipValues, updateTotalChipValue, setTotalChipValues, singleChipValue, winNumber, enableChip}){
     return(
         <div className="topArea">

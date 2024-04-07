@@ -5,9 +5,9 @@ function ZeroArea({addCom, totalChipValues, updateTotalChipValue, setTotalChipVa
     const listofZero = ['00', '0'];
 
     const zeroBlockClick = (index, event) => {
-        if(enableChip == true){
+        if(enableChip === true){
         const id = `${prefix}_${index}`;
-        const selectedNum = `${index}` == 0 ? ["00"]:[0];
+        const selectedNum = `${index}` === 0 ? ["00"]:[0];
         const odd = 35;
         const totalChipValue = (totalChipValues[id] || 0) + singleChipValue;
         updateTotalChipValue(id);
@@ -19,10 +19,10 @@ function ZeroArea({addCom, totalChipValues, updateTotalChipValue, setTotalChipVa
 
    function removeSelectedBlocks(index, event){
     event.preventDefault(); // Prevent the default context menu
-    if(enableChip == true){
+    if(enableChip === true){
     const id = `${prefix}_${index}`;
     const odd = 35;
-    const selectedNum = `${index}` == 0 ? ["00"]:[0];
+    const selectedNum = `${index}` === 0 ? ["00"]:[0];
     const totalChipValue = totalChipValues[id] || 0;
     addCom(selectedNum, id, odd, totalChipValue, event);
     // Toggle chip visibility based on right-click event
@@ -52,7 +52,6 @@ function ZeroArea({addCom, totalChipValues, updateTotalChipValue, setTotalChipVa
             }
         </div>
     )
-
 }
 
 export default ZeroArea;
