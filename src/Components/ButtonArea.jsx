@@ -38,7 +38,6 @@ function ButtonArea({myChart, setSingleChipValue, setWinNumber,selectedCombinati
             }
         });
         setClassArray(updatedClassArray);
-        console.log(classArray[0].additionalClass)
     }
   
     // Function to handle mute/unmute toggle
